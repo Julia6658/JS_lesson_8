@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Расчет стоимости авто</title>
+		<link rel="stylesheet" href="./main.css" />
+		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,700&display=swap&subset=cyrillic-ext" rel="stylesheet" />
+	</head>
+
+	<body>
+		<main class="calc-wrapper">
+			<div class="container">
+				<form id="form">
+					<div class="heading">
+						<h1 class="heading-title">Калькулятор стоимости авто</h1>
+						
+					</div>
+
+				
+					
+					<div class="calc-section">
+						<h4 class="checkbox-wrapper title-bold section-title">Mаркa автомобиля</h4>
+						<select id="brand" name="calculatorbrand">
+							<option value="1.1">Марка</option>
+							<option value="1.2">Reno</option>
+							<option value="1.3">Opel</option>
+							<option value="1.4">Mazda</option>
+							<option value="1.5">Jaguar</option>
+						</select>
+					</div>
+					
+					<div class="calc-section">
+						<h4 class="checkbox-wrapper title-bold section-title">Модель автомобиля</h4>
+							<select id="model" name="calculatormodel">
+								<option value="1.1">A1</option>
+								<option value="1.2">A2</option>
+								<option value="1.3">A3</option>
+								<option value="1.4">A4</option>
+							</select>
+					</div>
+						
+					<div class="calc-section">
+						<label class="checkbox-wrapper title-bold section-title"> Тип топлива </label>
+						<label class="radio-wrapper">
+							<input type="radio" class="radio" name="fuel" value="1" checked />
+							<div class="title-lite">бензин (включая гибрид)</div>
+						</label>
+						<label class="radio-wrapper">
+							<input type="radio" class="radio" name="fuel" value="1.4" />
+							<div class="title-lite">дизельное топливо</div>	
+						</label>
+						<label class="radio-wrapper">
+							<input type="radio" class="radio" name="fuel" value="1.9" />
+							<div class="title-lite">электрический</div>
+						</label>
+					</div>
+					
+					<div class="calc-section">
+						<label class="checkbox-wrapper title-bold section-title .section-title--vertical-center">
+							<span class="title__inline">Объем двигателя:</span>
+							<input type="number" min="1.5" max="3.5" value="1.5" id="square-input" class="title__inline input-short" />
+							<span class="title__inline">литров</span>
+						</label>
+						<input type="range" id="square-range" class="range-input" value="1.5" min="1.5" max="3.5" value="0" step="0.5" />
+					</div>
+					
+
+					
+					<div class="calc-section">
+						<label class="checkbox-wrapper title-bold section-title"> Состояние:</label>
+						<div class="state-wrapper">
+							<label class="state-label">
+								<input class="radio" type="radio" name="state" value="1.3" checked />
+								<span class="">Новый</span>
+							</label>
+
+							<label class="state-label">
+								<input class="radio" type="radio" name="state" value="0.7" />
+								<span class="">Подержанный</span>
+							</label>
+						</div>
+					</div>
+
+					<div class="calc-section calc-section-owners" style="display: none">
+						<label class="checkbox-wrapper title-bold section-title"> Владельцы:</label>
+						<div class="rooms-wrapper">
+							<label class="rooms-label">
+								<input class="radio" type="radio" name="owners" value="0.6" checked/>
+								<span class="">1-2 владельца</span>
+							</label>
+
+							<label class="rooms-label">
+								<input class="radio" type="radio" name="owners" value="0.5"/>
+								<span class="">более 3х</span>
+							</label>
+						</div>
+					</div>
+
+					<div class="calc-section calc-section-owners">
+						<label class="checkbox-wrapper title-bold section-title"> Способ оплаты</label>
+						<div class="rooms-wrapper">
+							<label class="rooms-label">
+								<input class="radio" type="radio" name="payment" value="0.99" />
+								<span class="">Картой</span>
+							</label>
+
+							<label class="rooms-label">
+								<input class="radio" type="radio" name="payment" value="1.005" checked/>
+								<span class="">Наличными</span>
+							</label>
+							<label class="rooms-label">
+								<input class="radio" type="radio" name="payment" value="1.1" checked/>
+								<span class="">Счёт на юридическое лицо</span>
+							</label>
+						</div>
+					</div>
+					
+
+				
+					<div class="calc-price">
+						<div class="calc-price-title">Стоимость авто:</div>
+						<div class="calc-price-value">
+							<span id="total-price">0</span>
+							рублей
+						</div>
+					</div>
+					
+				</form>
+			</div>
+		</main>
+
+		
+
+		<script src="./main.js"></script>
+	</body>
+</html>
